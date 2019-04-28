@@ -16,7 +16,7 @@ people_list_view = PeopleListView.as_view()
 class PersonCreateView(CreateView):
     model = Person
     fields = '__all__'
-    success_url = reverse_lazy('people_list_view')
+    success_url = reverse_lazy('people_list')
 
 
 person_create_view = PersonCreateView.as_view()
@@ -25,7 +25,7 @@ person_create_view = PersonCreateView.as_view()
 class PersonUpdateView(UpdateView):
     model = Person
     fields = '__all__'
-    success_url = reverse_lazy('people_list_view')
+    success_url = reverse_lazy('people_list')
 
 
 person_update_view = PersonUpdateView.as_view()

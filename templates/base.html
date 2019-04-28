@@ -15,6 +15,16 @@
       {% endif %}
     </ul>
   </div>
+
+   <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="{% url "index" %}">Home</a></li>
+            <li><a href="{% url "people_list" %}">Personas</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+  
   <div id="content">
     {% block content %}
     {% endblock %}
