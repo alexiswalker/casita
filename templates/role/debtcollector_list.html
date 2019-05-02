@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Cobradores</h1>
+<a href="{% url 'debt_collector_add' %}"> + </a>
+<ul>
+  {% for debt_collector in object_list %}
+  <li>
+    <a href="{% url 'debt_collector_update' debt_collector.pk %}"> {{ debt_collector }} </a> 
+  </li>
+{% empty %}
+    <li>No existe ningun cobrador almacenado en el sistema</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
